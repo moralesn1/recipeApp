@@ -1,0 +1,16 @@
+<div>
+  <label for="title">Title</label>
+<input required="true" type="text" name="title" value="<%= recipe.title%>">
+</div>
+<div>
+  
+<label for="title">Description</label>
+<textarea required="true" name="description" id="description"><%= recipe.description %></textarea>
+</div>
+
+<div>
+ <label for="recipe">Method</label>
+<textarea required="true" name="recipe" id="recipe"><%= recipe.recipe %></textarea> 
+</div>
+
+<button type="submit">Submit</button>

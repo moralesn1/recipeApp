@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <%- include('_headingnavbar')%>
+  <h1>Show Recipe</h1>
+  <h1><%= recipe.title %></h1>
+  <h4><%= recipe.description %></h4>
+  <p><%= recipe.recipe %><p>
+  <p>Posted at <%= recipe.createdAt.toLocaleDateString() %></p>
+  <a href="/recipes/edit/<%= recipe.id %>">Edit</a>
+  <form action="/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
+    <button type="submmit">Delete</button>
+  </form>
+  </body>
+</html>
