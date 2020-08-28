@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   </head>
   <body>
-  <%- include('_headingnavbar')%>
+  <%- include('../partials/_headingnavbar')%>
+    <div class="container">
   <h1>Edit Recipe</h1>
   <form action="/recipes/<%= recipe.id %>?_method=PUT" method="POST">
     <%- include('_form')%>
   </form>
+  </div>
   </body>
 </html>

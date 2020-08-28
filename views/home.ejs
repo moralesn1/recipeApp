@@ -9,30 +9,35 @@
 
   </head>
   <body>
-    <%- include('../partials/_headingnavbar')%>
-    <div class="container">
-          <h1 class="mt-3"> All Recipes </h1>
-          <a href="/recipes/new">Create New Article</a> 
+    <%- include('./partials/_headingnavbar')%>
 
-          <% recipes.forEach(recipe => { %>
-            <div class="card mt-4">
+    <div class="container">
+      <h1>Home Page</h1>
+      <div>
+      <h3>Latest Recipe</h3>
+<% recipes.map(recipe => { %>
+<div class="card mt-4">
               <div class="card-body">
                 <h3 class="card-title"><%= recipe.title %> </h3>
                 <div class="card-subtitle text-muted mb-2">
-                  <%= recipe.createdAt.toLocaleString()%>
+                  <%= recipe.createdAt%>
                 </div>
 
                 <div class="card-text mb-2">
                   <%= recipe.description %>
                 </div>
-                <a class="btn btn-success"href="/recipes/<%= recipe.id %>">View the recipe</a>
+                <a class="btn btn-success"href="/recipes/<%= recipe.id %>">View the recipes</a>
 
               </div>
             </div>
+<% }) %>
 
+              
+     
 
-          <% }) %>
     </div>
+    </div>
+    
 
 
   </body>
